@@ -35,4 +35,9 @@ class UpcomingMoviesInThePark::Park
     puts "#{i +1}. #{park.name}"}
   end
 
+  def list_showings
+    @showings.each_with_index {|showing, i| 
+      puts "#{i +1}. #{showing.name}"}
+  end
+
 end
