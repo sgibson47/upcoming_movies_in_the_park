@@ -10,25 +10,28 @@ class UpcomingMoviesInThePark::CLI
     puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
     puts "Or enter -exit- to quit."
 
-    input = gets.strip
-
-    case input
-    when "by name"
-      puts "1. Rear Window"
-      puts "2. The Princess Bride"
-      puts "3. Ferris Bueller's Day Off"
-    when "by date"
-      puts "1. Jun 6, 2018"
-      puts "2. Jun 7, 2018"
-      puts "3. Jun 8, 2018"
-    when "by park"
-      puts "1. Lincoln Park"
-      puts "2. Wicker Park"
-      puts "3. Millenium Park"
+    input = nil
+    while input != "exit"
+      input = gets.strip
+      if input == "by name"
+        puts "1. Rear Window"
+        puts "2. The Princess Bride"
+        puts "3. Ferris Bueller's Day Off"
+      elsif input == "by date"
+        puts "1. Jun 6, 2018"
+        puts "2. Jun 7, 2018"
+        puts "3. Jun 8, 2018"
+      elsif input == "by park"
+        puts "1. Lincoln Park"
+        puts "2. Wicker Park"
+        puts "3. Millenium Park"
+      elsif input === "exit"
+        break
+      else
+        puts "I can't tell what you're asking for."
+        puts "Please enter by name, by date, by park, or exit."
+      end
     end
-
   end
-
-
   
 end
