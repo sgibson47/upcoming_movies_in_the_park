@@ -1,3 +1,5 @@
+
+
 class UpcomingMoviesInThePark::CLI
 
   def call
@@ -356,6 +358,15 @@ class UpcomingMoviesInThePark::CLI
         puts "Please enter by name, by date, by park, or exit."
       end
     end
+  end
+
+  def by_name_path
+  end
+
+  def by_date_path
+  end
+
+  def by_park_path
   end
 
 end
