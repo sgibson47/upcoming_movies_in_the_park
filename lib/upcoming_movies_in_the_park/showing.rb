@@ -1,5 +1,6 @@
 require_relative './park'
 require_relative './gate'
+
 class UpcomingMoviesInThePark::Showing
   attr_accessor :name, :url
   attr_reader :date, :park
