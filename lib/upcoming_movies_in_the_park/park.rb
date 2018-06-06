@@ -7,5 +7,10 @@ class UpcomingMoviesInThePark::Park
     @@all << self
   end 
 
-  
+  def initialize(name)
+    @name = name
+    @showings =[]
+    self.save
+  end
+
 end
