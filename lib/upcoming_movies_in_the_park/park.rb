@@ -17,6 +17,17 @@ class UpcomingMoviesInThePark::Park
     @@all
   end
 
-  
+  def self.find_or_create_by_name(name)
+    if @@all.any? {|park| park.name == name}
+      @@all.find {|park| 
+        park.name == name}
+    else
+      park_1 = self.new(name)
+    end
+  end
+
+  def add_showing(showing)
+    @showings << showing
+  end
 
 end
