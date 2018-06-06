@@ -23,4 +23,13 @@ class UpcomingMoviesInThePark::Gate
     @day = data[32]
     @year = data[33]
   end
+
+  def self.find_or_create_by_name(name)
+    if @@all.any? {|gate| gate.name == name}
+      @@all.find {|gate| 
+        gate.name == name}
+    else
+      gate_1 = Gate.new(name)
+    end
+  end
 end
