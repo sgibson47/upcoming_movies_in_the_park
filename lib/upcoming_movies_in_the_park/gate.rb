@@ -1,4 +1,4 @@
-class UpcomingMoviesInThePark::Showing
+class UpcomingMoviesInThePark::Gate
   attr_accessor :name, :day, :month, :year, :showings
 
   @@all = []
@@ -18,5 +18,9 @@ class UpcomingMoviesInThePark::Showing
     @showings =[]
     @name = name
     self.save
+    data = name.split(/, | /)
+    @month = data[31]
+    @day = data[32]
+    @year = data[33]
   end
 end
