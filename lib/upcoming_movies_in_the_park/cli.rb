@@ -42,6 +42,7 @@ class UpcomingMoviesInThePark::CLI
       input = gets.strip
       if input.to_i > 0 && input.to_i <= UpcomingMoviesInThePark::Showing.all.length
         showing = UpcomingMoviesInThePark::Showing.all[input.to_i - 1]
+        puts "\n"
         showing.display_details
         puts "\n"
         puts "Enter another number to get the showing details for that movie"
@@ -79,28 +80,17 @@ class UpcomingMoviesInThePark::CLI
         input = nil
         while input != "return"
           input = gets.strip
-          if input == "1"
-            puts "details on showing of Rear Window"
+          if input.to_i > 0 && input.to_i <= date.showings.length
+            showing = date.showings[input.to_i - 1]
             puts "\n"
-            puts "Enter another number to get the showing details for that movie"
-            puts "or enter return to go return to the list of upcoming dates"
-            puts "on which movies are playing in a park."
-          elsif input == "2"
-            puts "details on showing of The Princess Bride"
-            puts "\n"
-            puts "Enter another number to get the showing details for that movie"
-            puts "or enter return to go return to the list of upcoming dates"
-            puts "on which movies are playing in a park."
-          elsif input == "3"
-            puts "details on showing of Ferris Bueller's Day Off"
+            showing.display_details
             puts "\n"
             puts "Enter another number to get the showing details for that movie"
             puts "or enter return to go return to the list of upcoming dates"
             puts "on which movies are playing in a park."
           elsif input == "return"
-            puts "1. Jun 6, 2018"
-            puts "2. Jun 7, 2018"
-            puts "3. Jun 8, 2018"
+            puts "\n"
+            date.list_showings
             puts "\n"
             puts "Enter a number to get a list of movies playing on that date"
             puts "or enter back to go back to the main menu."
