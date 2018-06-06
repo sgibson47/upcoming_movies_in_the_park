@@ -17,6 +17,22 @@ class UpcomingMoviesInThePark::CLI
         puts "1. Rear Window"
         puts "2. The Princess Bride"
         puts "3. Ferris Bueller's Day Off"
+        puts "Enter a number to get the showing details for that movie."
+        
+        input = nil
+        while input != "back"
+          input = gets.strip
+          if input == "1"
+            puts "details on showing of Rear Window"
+          elsif input == "2"
+            puts "details on showing of The Princess Bride"
+          elsif input == "3"
+            puts "details on showing of Ferris Bueller's Day Off"
+          elsif input == "back"
+            break
+          end 
+        end
+
       elsif input == "by date"
         puts "1. Jun 6, 2018"
         puts "2. Jun 7, 2018"
@@ -33,5 +49,5 @@ class UpcomingMoviesInThePark::CLI
       end
     end
   end
-  
+
 end
