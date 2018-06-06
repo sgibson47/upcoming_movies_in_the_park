@@ -12,5 +12,11 @@ class UpcomingMoviesInThePark::Showing
   def self.all
     @@all
   end 
-  
+
+
+  def initialize(name)
+    @showings =[]
+    @name = name
+    self.save
+  end
 end
