@@ -24,9 +24,9 @@ class UpcomingMoviesInThePark::Gate
   end
 
   def self.find_or_create_by_name(name)
-    if @@all.any? {|gate| gate.name == name}
-      @@all.find {|gate| 
-        gate.name == name}
+    data = name.split(/, | /)
+    if @@all.any? {|gate| data[31] == gate.month && data[32] == gate.day && data[33] = gate.year}
+      @@all.find {|gate| data[31] == gate.month && data[32] == gate.day && data[33] = gate.year}
     else
       gate_1 = self.new(name)
     end

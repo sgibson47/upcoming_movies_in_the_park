@@ -62,9 +62,8 @@ class UpcomingMoviesInThePark::CLI
   end
 
   def by_date_path
-    puts "1. Jun 6, 2018"
-    puts "2. Jun 7, 2018"
-    puts "3. Jun 8, 2018"
+    puts "\n"
+    UpcomingMoviesInThePark::Gate.list_by_date
     puts "\n"
     puts "Enter a number to get a list of movies playing on that date"
     puts "or enter back to go back to the main menu."
