@@ -1,4 +1,4 @@
-require "upcoming_movies_in_the_park/version"
+require_relative '../config/environment'
 
 module UpcomingMoviesInThePark
   # Your code goes here...

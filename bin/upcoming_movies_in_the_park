@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/upcoming_movies_in_the_park'
+
+# UpcomingMoviesInThePark::CLI.call
