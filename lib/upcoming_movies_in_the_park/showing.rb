@@ -1,3 +1,4 @@
+require_relative './park'
 class UpcomingMoviesInThePark::Showing
   attr_accessor :name, :date, :time, :park, :url
 
