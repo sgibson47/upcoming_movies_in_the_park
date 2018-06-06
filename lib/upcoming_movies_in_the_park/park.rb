@@ -30,4 +30,9 @@ class UpcomingMoviesInThePark::Park
     @showings << showing
   end
 
+  def self.list_by_name
+    self.all.each_with_index {|park, i|
+    puts "#{i +1}. #{park.name}"}
+  end
+
 end
