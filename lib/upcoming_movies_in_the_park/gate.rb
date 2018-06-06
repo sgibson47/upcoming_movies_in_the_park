@@ -29,7 +29,7 @@ class UpcomingMoviesInThePark::Gate
       @@all.find {|gate| 
         gate.name == name}
     else
-      gate_1 = Gate.new(name)
+      gate_1 = self.new(name)
     end
   end
 
