@@ -209,9 +209,9 @@ class UpcomingMoviesInThePark::CLI
   end
 
   def by_park_path
-    puts "1. Lincoln Park"
-    puts "2. Wicker Park"
-    puts "3. Millenium Park"
+    puts "\n"
+    UpcomingMoviesInThePark::Park.list_by_name
+    puts "\n"
     puts "Enter a number to get a list of movies playing in that park"
     puts "or enter back to go back to the main menu."
     input = nil
