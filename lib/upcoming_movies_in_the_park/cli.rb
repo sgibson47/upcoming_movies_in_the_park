@@ -246,6 +246,10 @@ class UpcomingMoviesInThePark::CLI
                 puts "Enter a number to get a list of movies playing in that park"
                 puts "or enter back to go back to the main menu."
                 break
+              else 
+                puts "Enter a number to get the showing details for that movie"
+                puts "or enter return to return to the list of parks"
+                puts "in which upcoming movies are playing."
               end 
             end
           elsif input == "2"
@@ -285,6 +289,10 @@ class UpcomingMoviesInThePark::CLI
                 puts "Enter a number to get a list of movies playing in that park"
                 puts "or enter back to go back to the main menu."
                 break
+              else 
+                puts "Enter a number to get the showing details for that movie"
+                puts "or enter return to return to the list of parks"
+                puts "in which upcoming movies are playing."
               end 
             end
           elsif input == "3"
@@ -292,7 +300,7 @@ class UpcomingMoviesInThePark::CLI
             puts "2. North by Northwest"
             puts "3. Hidden Figures"
             puts "\n"
-            puts "Enter another number to get the showing details for that movie"
+            puts "Enter a number to get the showing details for that movie"
             puts "or enter return to return to the list of parks"
             puts "in which upcoming movies are playing."
             input = nil
@@ -324,6 +332,10 @@ class UpcomingMoviesInThePark::CLI
                 puts "Enter a number to get a list of movies playing in that park"
                 puts "or enter back to go back to the main menu."
                 break
+              else 
+                puts "Enter a number to get the showing details for that movie"
+                puts "or enter return to return to the list of parks"
+                puts "in which upcoming movies are playing."
               end 
             end
           elsif input == "back"
@@ -334,6 +346,9 @@ class UpcomingMoviesInThePark::CLI
             puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
             puts "Or enter -exit- to quit."
             break
+          else 
+            puts "Enter a number to get a list of movies playing in that park"
+            puts "or enter back to go back to the main menu."
           end 
         end
       elsif input === "exit"
