@@ -3,6 +3,10 @@
 class UpcomingMoviesInThePark::CLI
 
   def call
+    
+  end
+
+  def menu
     puts "\n"
     puts "Upcoming Movies in Chicago Parks"
     puts "\n"
@@ -28,7 +32,7 @@ class UpcomingMoviesInThePark::CLI
         puts "Please enter by name, by date, by park, or exit."
       end
     end
-  end
+  end 
 
   def by_name_path
     puts "\n"
