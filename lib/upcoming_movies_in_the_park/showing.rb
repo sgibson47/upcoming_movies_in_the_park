@@ -17,6 +17,10 @@ class UpcomingMoviesInThePark::Showing
     puts "on #{@date} in #{@park}."
   end
 
+  def save
+    @@all << self
+  end
+
   show_1 = UpcomingMoviesInThePark::Showing.new
   show_1.name = "Ferris Bueller's Day Off"
   show_1.date = "Fri, Jun 1, 2018"
