@@ -1,8 +1,8 @@
 require_relative './park'
 require_relative './gate'
 class UpcomingMoviesInThePark::Showing
-  attr_accessor :name, :park, :url
-  attr_reader :date
+  attr_accessor :name, :url
+  attr_reader :date, :park
 
   @@all =[]
 
@@ -34,10 +34,15 @@ class UpcomingMoviesInThePark::Showing
     @date.add_showing(self)
   end
 
+  def park=(str)
+    @park = UpcomingMoviesInThePark::Park.find_or_create_by_name(str)
+    @park.add_showing(self)
+  end
+
   show_1 = UpcomingMoviesInThePark::Showing.new
   show_1.name = "Ferris Bueller's Day Off"
   show_1.date = ("\n              Date & Time:\n              Mon, Jun 11, 2018 from 8:30 PM - 10:22 PM\n            ")
-  show_1.park = UpcomingMoviesInThePark::Park.new("Lincoln Park")
+  show_1.park = ("Lincoln Park")
   show_1.url = "url"
   @@all << show_1
 
@@ -52,7 +57,7 @@ class UpcomingMoviesInThePark::Showing
   show_3 = UpcomingMoviesInThePark::Showing.new
   show_3.name = "The Princess Bride"
   show_3.date = ("\n              Date & Time:\n              Mon, Jun 11, 2018 from 8:30 PM - 10:22 PM\n            ")
-  show_3.park = UpcomingMoviesInThePark::Park.new("Wicker Park")
+  show_3.park = ("Wicker Park")
   show_3.url = "url"
   @@all << show_3
 end
