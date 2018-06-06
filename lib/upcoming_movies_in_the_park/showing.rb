@@ -12,6 +12,11 @@ class UpcomingMoviesInThePark::Showing
     puts "#{i +1}. #{showing.name}"}
   end
 
+  def display_details
+    puts "#{@name} is playing at #{@time}"
+    puts "on #{@date} in #{@park}."
+  end
+
   show_1 = UpcomingMoviesInThePark::Showing.new
   show_1.name = "Ferris Bueller's Day Off"
   show_1.date = "Fri, Jun 1, 2018"
