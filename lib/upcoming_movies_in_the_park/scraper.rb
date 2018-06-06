@@ -1,4 +1,9 @@
 class UpcomingMoviesInThePark::Scraper
+  attr_accessor :showings
+
+  def initialize
+    @showings =[]
+  end
 
   def get_showing_urls
     day = Date.today
