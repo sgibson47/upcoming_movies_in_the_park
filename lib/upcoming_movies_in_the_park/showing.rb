@@ -40,6 +40,14 @@ class UpcomingMoviesInThePark::Showing
     @park.add_showing(self)
   end
 
+  def self.create_from_hash
+    thing = UpcomingMoviesInThePark::Showing.new
+    hash.each do |k,v|
+      thing.send("#{k}=", v)
+    end
+    @@all<<thing
+  end 
+
   show_1 = UpcomingMoviesInThePark::Showing.new
   show_1.name = "Ferris Bueller's Day Off"
   show_1.date = ("\n              Date & Time:\n              Mon, Jun 11, 2018 from 8:30 PM - 10:22 PM\n            ")

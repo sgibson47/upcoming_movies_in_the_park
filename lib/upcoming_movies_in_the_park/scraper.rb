@@ -21,6 +21,9 @@ class UpcomingMoviesInThePark::Scraper
   def get_showing_details
     self.urls.each do |url|
       doc = get_page("https://www.chicagoparkdistrict.com/#{url}")
+
+      binding.pry 
+      
       showing_hash ={}
       showing_hash[:name] = doc.css("").text
       showing_hash[:date] = doc.css("").text
