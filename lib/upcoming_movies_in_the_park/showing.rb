@@ -7,6 +7,11 @@ class UpcomingMoviesInThePark::Showing
     @@all
   end
 
+  def self.list_by_name
+    self.all.each_with_index {|showing, i|
+    puts "#{i +1}. #{showing.name}"}
+  end
+
   show_1 = UpcomingMoviesInThePark::Showing.new
   show_1.name = "Ferris Bueller's Day Off"
   show_1.date = "Fri, Jun 1, 2018"

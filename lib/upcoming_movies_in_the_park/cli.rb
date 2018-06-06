@@ -15,9 +15,7 @@ class UpcomingMoviesInThePark::CLI
       input = gets.strip
       if input == "by name"
         puts "\n"
-        puts "1. Rear Window"
-        puts "2. The Princess Bride"
-        puts "3. Ferris Bueller's Day Off"
+        UpcomingMoviesInThePark::Showing.list_by_name
         puts "\n"
         puts "Enter a number to get the showing details for that movie"
         puts "or enter back to go back to the main menu."
