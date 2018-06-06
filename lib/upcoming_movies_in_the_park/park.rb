@@ -13,4 +13,10 @@ class UpcomingMoviesInThePark::Park
     self.save
   end
 
+  def self.all
+    @@all
+  end
+
+  
+
 end
