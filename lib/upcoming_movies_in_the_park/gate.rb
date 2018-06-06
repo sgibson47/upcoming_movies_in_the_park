@@ -32,4 +32,8 @@ class UpcomingMoviesInThePark::Gate
       gate_1 = Gate.new(name)
     end
   end
+
+  def add_showing(showing)
+    @showings << showing
+  end
 end
