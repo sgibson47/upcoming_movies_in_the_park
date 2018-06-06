@@ -91,7 +91,7 @@ class UpcomingMoviesInThePark::CLI
             puts "on which movies are playing in a park."
           elsif input == "return"
             puts "\n"
-            date.list_showings
+            UpcomingMoviesInThePark::Gate.list_by_date
             puts "\n"
             puts "Enter a number to get a list of movies playing on that date"
             puts "or enter back to go back to the main menu."
