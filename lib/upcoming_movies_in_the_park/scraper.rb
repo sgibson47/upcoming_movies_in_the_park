@@ -1,0 +1,3 @@
+class UpcomingMoviesInThePark::Scraper
+  
+end
