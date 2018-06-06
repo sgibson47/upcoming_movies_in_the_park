@@ -17,18 +17,34 @@ class UpcomingMoviesInThePark::CLI
         puts "1. Rear Window"
         puts "2. The Princess Bride"
         puts "3. Ferris Bueller's Day Off"
-        puts "Enter a number to get the showing details for that movie."
+        puts "Enter a number to get the showing details for that movie"
+        puts "or enter back to go back to the main menu."
         
         input = nil
         while input != "back"
           input = gets.strip
           if input == "1"
             puts "details on showing of Rear Window"
+            puts "\n"
+            puts "Enter another number to get the showing details for that movie"
+            puts "or enter back to go back to the main menu."
           elsif input == "2"
             puts "details on showing of The Princess Bride"
+            puts "\n"
+            puts "Enter another number to get the showing details for that movie"
+            puts "or enter back to go back to the main menu."
           elsif input == "3"
             puts "details on showing of Ferris Bueller's Day Off"
+            puts "\n"
+            puts "Enter another number to get the showing details for that movie"
+            puts "or enter back to go back to the main menu."
           elsif input == "back"
+            puts "\n"
+            puts "Welcome back to the main menu."
+            puts "Enter -by name- to see a list of upcoming movies by their names."
+            puts "Enter -by date- to see a list of upcoming dates on which movies are playing in a park."
+            puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
+            puts "Or enter -exit- to quit."
             break
           end 
         end
