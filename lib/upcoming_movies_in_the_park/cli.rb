@@ -40,18 +40,9 @@ class UpcomingMoviesInThePark::CLI
     input = nil
     while input != "back"
       input = gets.strip
-      if input == "1"
-        puts "details on showing of Rear Window"
-        puts "\n"
-        puts "Enter another number to get the showing details for that movie"
-        puts "or enter back to go back to the main menu."
-      elsif input == "2"
-        puts "details on showing of The Princess Bride"
-        puts "\n"
-        puts "Enter another number to get the showing details for that movie"
-        puts "or enter back to go back to the main menu."
-      elsif input == "3"
-        puts "details on showing of Ferris Bueller's Day Off"
+      if input.to_i > 0 && input.to_i <= UpcomingMoviesInThePark::Showing.all.length
+        showing = UpcomingMoviesInThePark::Showing.all[input.to_i - 1]
+        showing.display_details
         puts "\n"
         puts "Enter another number to get the showing details for that movie"
         puts "or enter back to go back to the main menu."
