@@ -1,5 +1,5 @@
 class UpcomingMoviesInThePark::Scraper
-  attr_accessor :showings
+  attr_accessor :showings, :urls
 
   def initialize
     @showings =[]
@@ -11,7 +11,18 @@ class UpcomingMoviesInThePark::Scraper
 
     doc2 = doc.css("div.view-content")
 
-    arr = doc2.children.css("div.views-field h2 a").map{ |x| x.attribute('href').value}
+    @urls = doc2.children.css("div.views-field h2 a").map{ |x| x.attribute('href').value}
+  end
+
+  def get_showing_details
+    self.urls.each do |url|
+      doc = Nokogiri::HTML(open("https://www.chicagoparkdistrict.com/#{url}")
+      showing_hash ={}
+      showing_hash[:name] = doc.css("").text
+      showing_hash[:date] = doc.css("").text
+      showing_hash[:park] = doc.css("").text
+      @showings << showing_hash
+    end
   end
 
 end
