@@ -3,7 +3,8 @@
 class UpcomingMoviesInThePark::CLI
 
   def call
-    
+    UpcomingMoviesInThePark::Scraper.new.make_showings
+    menu
   end
 
   def menu
