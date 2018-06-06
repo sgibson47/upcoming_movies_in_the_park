@@ -13,7 +13,6 @@ class UpcomingMoviesInThePark::Gate
     @@all
   end 
 
-
   def initialize(name)
     @showings =[]
     @name = name
@@ -36,4 +35,10 @@ class UpcomingMoviesInThePark::Gate
   def add_showing(showing)
     @showings << showing
   end
+
+  def self.list_by_date
+    self.all.each_with_index {|gate, i|
+    puts "#{i +1}. #{gate.month} #{gate.day}, #{gate.year}"}
+  end
+
 end
