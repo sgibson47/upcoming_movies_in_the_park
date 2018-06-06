@@ -23,12 +23,20 @@ class UpcomingMoviesInThePark::Scraper
       doc = get_page("https://www.chicagoparkdistrict.com/#{url}")
 
       binding.pry 
-      
+
       showing_hash ={}
       showing_hash[:name] = doc.css("").text
       showing_hash[:date] = doc.css("").text
       showing_hash[:park] = doc.css("").text
       @showings << showing_hash
+    end
+  end
+
+  def make_showings
+    get_showing_urls
+    get_showing_details
+    @showings.each do |hash|
+      UpcomingMoviesInThePark::Showing.create_from_hash(hash)
     end
   end
 
