@@ -40,12 +40,12 @@ class UpcomingMoviesInThePark::Showing
     @park.add_showing(self)
   end
 
-  def self.create_from_hash
+  def self.create_from_hash(hash)
     thing = UpcomingMoviesInThePark::Showing.new
     hash.each do |k,v|
       thing.send("#{k}=", v)
     end
     @@all<<thing
   end 
-  
+
 end
