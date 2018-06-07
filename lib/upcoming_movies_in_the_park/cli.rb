@@ -40,8 +40,16 @@ class UpcomingMoviesInThePark::CLI
       elsif input === "exit"
         break
       else
-        puts "I can't tell what you're asking for."
-        puts "Please enter by name, by date, by park, or exit."
+        puts "Hrm, I don't understand what you want.".colorize(:blue)
+        puts "Please enter".colorize(:blue)
+        print " by name"
+        print ", ".colorize(:blue)
+        print "by date"
+        print ", ".colorize(:blue)
+        print "by park"
+        print ", or ".colorize(:blue)
+        print "exit"
+        puts ".".colorize(:blue)
       end
     end
   end 
