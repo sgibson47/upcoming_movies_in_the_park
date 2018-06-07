@@ -13,12 +13,12 @@ class UpcomingMoviesInThePark::Showing
 
   def self.list_by_name
     self.all.each_with_index {|showing, i|
-    puts "#{i +1}. #{showing.name}"}
+    puts "#{i +1}. #{showing.name}".colorize(:green)}
   end
 
   def display_details
-    puts "#{@name} is playing from #{self.time}"
-    puts "on #{@date.month} #{@date.day}, #{@date.year} in #{@park.name}."
+    puts "#{@name} is playing from #{self.time}".colorize(:red)
+    puts "on #{@date.month} #{@date.day}, #{@date.year} in #{@park.name}.".colorize(:red)
   end
 
   def save
