@@ -90,9 +90,7 @@ class UpcomingMoviesInThePark::CLI
             puts "\n"
             showing.display_details
             puts "\n"
-            puts "Enter another number to get the showing details for that movie"
-            puts "or enter return to go return to the list of upcoming dates"
-            puts "on which movies are playing in a park."
+            by_date_instructions_2
           elsif input == "return"
             puts "\n"
             UpcomingMoviesInThePark::Gate.list_by_date
@@ -100,8 +98,8 @@ class UpcomingMoviesInThePark::CLI
             by_date_instructions_1
             break
           else
-            puts "Enter a number to get the showing details for that movie"
-            puts "or enter return to go back to the list of dates."
+            puts "Hrm, I don't understand what you want."
+            by_date_instructions_2
           end 
         end
       elsif input == "back"
@@ -117,6 +115,12 @@ class UpcomingMoviesInThePark::CLI
   def by_date_instructions_1
     puts "Enter a number to get a list of movies playing on that date"
     puts "or enter back to go back to the main menu."
+  end
+
+  def by_date_instructions_2
+    puts "Enter another number to get the showing details for that movie"
+    puts "or enter return to go return to the list of upcoming dates"
+    puts "on which movies are playing in a park."
   end
 
   def by_park_path
