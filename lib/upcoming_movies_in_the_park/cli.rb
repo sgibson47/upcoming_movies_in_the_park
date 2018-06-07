@@ -10,13 +10,21 @@ class UpcomingMoviesInThePark::CLI
 
   def menu
     puts "\n"
-    puts "Upcoming Movies in Chicago Parks"
+    puts "Upcoming Movies in Chicago Parks".colorize(:blue)
     puts "\n"
-    puts "How would you like to explore movies in the park?"
-    puts "Enter -by name- to see a list of upcoming movies by their names."
-    puts "Enter -by date- to see a list of upcoming dates on which movies are playing in a park."
-    puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
-    puts "Or enter -exit- to quit."
+    puts "How would you like to explore movies in the park?".colorize(:blue)
+    print "Enter".colorize(:blue) 
+    print " by name " 
+    puts "to see a list of upcoming movies by their names.".colorize(:blue)
+    print "Enter".colorize(:blue) 
+    print " by date " 
+    puts "to see a list of upcoming dates on which movies are playing in a park.".colorize(:blue)
+    print "Enter".colorize(:blue) 
+    print " by park " 
+    puts "to see a list of parks in which upcoming movies are playing.".colorize(:blue)
+    print "Or enter".colorize(:blue) 
+    print " exit " 
+    puts "to quit.".colorize(:blue)
   end 
 
   def menu_path
