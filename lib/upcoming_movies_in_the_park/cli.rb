@@ -134,7 +134,9 @@ class UpcomingMoviesInThePark::CLI
   end
 
   def by_date_instructions_1
-    puts "Enter a number to get a list of movies playing on that date".colorize(:green)
+    print "Enter ".colorize(:green)
+    print "a number "
+    puts "to get a list of movies playing on that date".colorize(:green)
     print "or enter ".colorize(:green)
     print "back"
     puts " to go back to the main menu.".colorize(:green)
