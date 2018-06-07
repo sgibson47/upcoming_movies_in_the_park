@@ -42,8 +42,7 @@ class UpcomingMoviesInThePark::CLI
     puts "\n"
     UpcomingMoviesInThePark::Showing.list_by_name
     puts "\n"
-    puts "Enter a number to get the showing details for that movie"
-    puts "or enter back to go back to the main menu."
+    by_name_instructions
     
     input = nil
     while input != "back"
@@ -53,8 +52,7 @@ class UpcomingMoviesInThePark::CLI
         puts "\n"
         showing.display_details
         puts "\n"
-        puts "Enter another number to get the showing details for that movie"
-        puts "or enter back to go back to the main menu."
+        by_name_instructions
       elsif input == "back"
         menu
         break
@@ -74,8 +72,7 @@ class UpcomingMoviesInThePark::CLI
     puts "\n"
     UpcomingMoviesInThePark::Gate.list_by_date
     puts "\n"
-    puts "Enter a number to get a list of movies playing on that date"
-    puts "or enter back to go back to the main menu."
+    by_date_instructions_1
     input = nil
     while input != "back"
       input = gets.strip
@@ -84,8 +81,7 @@ class UpcomingMoviesInThePark::CLI
         puts "\n"
         date.list_showings
         puts "\n"
-        puts "Enter a number to get the showing details for that movie"
-        puts "or enter return to go back to the list of dates."
+        by_date_instructions_1
         input = nil
         while input != "return"
           input = gets.strip
@@ -101,8 +97,7 @@ class UpcomingMoviesInThePark::CLI
             puts "\n"
             UpcomingMoviesInThePark::Gate.list_by_date
             puts "\n"
-            puts "Enter a number to get a list of movies playing on that date"
-            puts "or enter back to go back to the main menu."
+            by_date_instructions_1
             break
           else
             puts "Enter a number to get the showing details for that movie"
@@ -113,10 +108,15 @@ class UpcomingMoviesInThePark::CLI
         menu
         break
       else
-        puts "Enter a number to get a list of movies playing on that date"
-        puts "or enter back to go back to the main menu."
+        puts "Hrm, I don't understand what you want."
+        by_date_instructions_1
       end 
     end
+  end
+
+  def by_date_instructions_1
+    puts "Enter a number to get a list of movies playing on that date"
+    puts "or enter back to go back to the main menu."
   end
 
   def by_park_path
