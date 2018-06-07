@@ -38,12 +38,12 @@ class UpcomingMoviesInThePark::Gate
 
   def self.list_by_date
     self.all.each_with_index {|gate, i|
-      puts "#{i +1}. #{gate.month} #{gate.day}, #{gate.year}"}
+      puts "#{i +1}. #{gate.month} #{gate.day}, #{gate.year}".colorize(:green)}
   end
 
   def list_showings
     @showings.each_with_index {|showing, i| 
-      puts "#{i +1}. #{showing.name}"}
+      puts "#{i +1}. #{showing.name}".colorize(:brown)}
   end
 
 end
