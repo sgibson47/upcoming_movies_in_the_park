@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = "upcoming_movies_in_the_park"
-  spec.require_paths = ["lib", "lib/upcoming_movies_in_the_park"]]
+  spec.require_paths = ["lib", "lib/upcoming_movies_in_the_park"]
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
