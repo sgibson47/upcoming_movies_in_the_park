@@ -59,11 +59,16 @@ class UpcomingMoviesInThePark::CLI
         menu
         break
       else
-        puts "Enter a number from the list to get the showing details for that movie"
-        puts "or enter back to go back to the main menu."
+        puts "Hrm, I don't understand what you want."
+        by_name_instructions
       end 
     end
   end
+
+  def by_name_instructions
+    puts "Enter a number from the list movie names to get the showing details for that movie"
+    puts "or enter back to go back to the main menu."
+  end 
 
   def by_date_path
     puts "\n"
