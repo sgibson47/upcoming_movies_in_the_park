@@ -127,8 +127,7 @@ class UpcomingMoviesInThePark::CLI
     puts "\n"
     UpcomingMoviesInThePark::Park.list_by_name
     puts "\n"
-    puts "Enter a number to get a list of movies playing in that park"
-    puts "or enter back to go back to the main menu."
+    by_park_instructions_1
     input = nil
     while input != "back"
       input = gets.strip
@@ -155,8 +154,7 @@ class UpcomingMoviesInThePark::CLI
             puts "\n"
             UpcomingMoviesInThePark::Park.list_by_name
             puts "\n"
-            puts "Enter a number to get a list of movies playing in that park"
-            puts "or enter back to go back to the main menu."
+            by_park_instructions_1
             break
           else 
             puts "Enter a number to get the showing details for that movie"
@@ -168,10 +166,15 @@ class UpcomingMoviesInThePark::CLI
         menu
         break
       else 
-        puts "Enter a number to get a list of movies playing in that park"
-        puts "or enter back to go back to the main menu."
+        puts "Hrm, I don't understand what you want."
+        by_park_instructions_1
       end 
     end
+  end
+
+  def by_park_instructions_1
+    puts "Enter a number to get a list of movies playing in that park"
+    puts "or enter back to go back to the main menu."
   end
 
 end
