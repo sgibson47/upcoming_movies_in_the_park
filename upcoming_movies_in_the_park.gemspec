@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sgibson47@gmail.com"]
 
   spec.summary       = %q{Upcoming Movies In The Park}
-  spec.description   = %q{Upcoming Movies In The Park}
+  spec.description   = %q{Provides details on upcoming movies in Chicagos parks.}
   spec.homepage      = "https://github.com/sgibson47/upcoming_movies_in_the_park"
   spec.license       = "MIT"
 
@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = "upcoming_movies_in_the_park"
-  spec.require_paths = ["lib"]
+  spec.require_paths = ["lib", "lib/upcoming_movies_in_the_park"]]
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
