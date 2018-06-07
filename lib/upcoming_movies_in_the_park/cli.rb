@@ -5,6 +5,7 @@ class UpcomingMoviesInThePark::CLI
   def call
     UpcomingMoviesInThePark::Scraper.new.make_showings
     menu
+    menu_path
   end
 
   def menu
@@ -16,7 +17,9 @@ class UpcomingMoviesInThePark::CLI
     puts "Enter -by date- to see a list of upcoming dates on which movies are playing in a park."
     puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
     puts "Or enter -exit- to quit."
+  end 
 
+  def menu_path
     input = nil
     while input != "exit"
       input = gets.strip
@@ -53,12 +56,7 @@ class UpcomingMoviesInThePark::CLI
         puts "Enter another number to get the showing details for that movie"
         puts "or enter back to go back to the main menu."
       elsif input == "back"
-        puts "\n"
-        puts "Welcome back to the main menu."
-        puts "Enter -by name- to see a list of upcoming movies by their names."
-        puts "Enter -by date- to see a list of upcoming dates on which movies are playing in a park."
-        puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
-        puts "Or enter -exit- to quit."
+        menu
         break
       else
         puts "Enter a number from the list to get the showing details for that movie"
@@ -107,12 +105,7 @@ class UpcomingMoviesInThePark::CLI
           end 
         end
       elsif input == "back"
-        puts "\n"
-        puts "Welcome back to the main menu."
-        puts "Enter -by name- to see a list of upcoming movies by their names."
-        puts "Enter -by date- to see a list of upcoming dates on which movies are playing in a park."
-        puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
-        puts "Or enter -exit- to quit."
+        menu
         break
       else
         puts "Enter a number to get a list of movies playing on that date"
@@ -163,12 +156,7 @@ class UpcomingMoviesInThePark::CLI
           end 
         end
       elsif input == "back"
-        puts "\n"
-        puts "Welcome back to the main menu."
-        puts "Enter -by name- to see a list of upcoming movies by their names."
-        puts "Enter -by date- to see a list of upcoming dates on which movies are playing in a park."
-        puts "Enter -by park- to see a list of parks in which upcoming movies are playing."
-        puts "Or enter -exit- to quit."
+        menu
         break
       else 
         puts "Enter a number to get a list of movies playing in that park"
