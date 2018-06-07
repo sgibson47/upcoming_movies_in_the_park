@@ -27,7 +27,7 @@ class UpcomingMoviesInThePark::Scraper
       showing_hash ={}
       showing_hash[:name] = doc.css("b").text
       showing_hash[:date] = doc.css("p").first.text
-      showing_hash[:park] = doc.css("").text
+      showing_hash[:park] = doc.css("div.field--name-node-title a").text
       @showings << showing_hash
     end
   end
