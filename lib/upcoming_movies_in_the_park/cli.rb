@@ -81,8 +81,12 @@ class UpcomingMoviesInThePark::CLI
   end
 
   def by_name_instructions
-    puts "Enter a number from the list movie names to get the showing details for that movie".colorize(:green)
-    puts "or enter back to go back to the main menu.".colorize(:green)
+    print "Enter ".colorize(:green)
+    print "a number"
+    puts " from the list movie names to get the showing details for that movie".colorize(:green)
+    print "or enter ".colorize(:green)
+    print "back"
+    puts " to go back to the main menu.".colorize(:green)
   end 
 
   def by_date_path
@@ -131,12 +135,18 @@ class UpcomingMoviesInThePark::CLI
 
   def by_date_instructions_1
     puts "Enter a number to get a list of movies playing on that date".colorize(:green)
-    puts "or enter back to go back to the main menu.".colorize(:green)
+    print "or enter ".colorize(:green)
+    print "back"
+    puts " to go back to the main menu.".colorize(:green)
   end
 
   def by_date_instructions_2
-    puts "Enter another number to get the showing details for that movie".colorize(:cyan)
-    puts "or enter return to go return to the list of upcoming dates".colorize(:cyan)
+    print "Enter ".colorize(:cyan)
+    print "another number"
+    puts " to get the showing details for that movie".colorize(:cyan)
+    print "or enter ".colorize(:cyan)
+    print "return"
+    puts " to go return to the list of upcoming dates".colorize(:cyan)
     puts "on which movies are playing in a park.".colorize(:cyan)
   end
 
@@ -185,13 +195,21 @@ class UpcomingMoviesInThePark::CLI
   end
 
   def by_park_instructions_1
-    puts "Enter a number to get a list of movies playing in that park".colorize(:green)
-    puts "or enter back to go back to the main menu.".colorize(:green)
+    print "Enter ".colorize(:green)
+    print "a number"
+    puts " to get a list of movies playing in that park".colorize(:green)
+    print "or enter ".colorize(:green)
+    print "back"
+    puts " to go back to the main menu.".colorize(:green)
   end
 
   def by_park_instructions_2
-    puts "Enter another number to get the showing details for that movie".colorize(:cyan)
-    puts "or enter return to return to the list of parks".colorize(:cyan)
+    print "Enter ".colorize(:cyan)
+    print "another number"
+    puts " to get the showing details for that movie".colorize(:cyan)
+    print "or enter ".colorize(:cyan)
+    print "return"
+    print " to return to the list of parks".colorize(:cyan)
     puts "in which upcoming movies are playing.".colorize(:cyan)
   end
 
