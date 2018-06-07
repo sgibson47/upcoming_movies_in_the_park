@@ -98,7 +98,7 @@ class UpcomingMoviesInThePark::CLI
         puts "\n"
         date.list_showings
         puts "\n"
-        by_date_instructions_1
+        by_date_instructions_2
         input = nil
         while input != "return"
           input = gets.strip
