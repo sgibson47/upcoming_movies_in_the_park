@@ -37,7 +37,7 @@ class UpcomingMoviesInThePark::Park
 
   def list_showings
     @showings.each_with_index {|showing, i| 
-      puts "#{i +1}. #{showing.name}".colorize(:brown)}
+      puts "#{i +1}. #{showing.name}".colorize(:cyan)}
   end
 
 end

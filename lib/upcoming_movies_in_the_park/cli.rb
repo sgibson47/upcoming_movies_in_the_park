@@ -115,7 +115,7 @@ class UpcomingMoviesInThePark::CLI
             by_date_instructions_1
             break
           else
-            puts "Hrm, I don't understand what you want.".colorize(:brown)
+            puts "Hrm, I don't understand what you want.".colorize(:cyan)
             by_date_instructions_2
           end 
         end
@@ -135,9 +135,9 @@ class UpcomingMoviesInThePark::CLI
   end
 
   def by_date_instructions_2
-    puts "Enter another number to get the showing details for that movie".colorize(:brown)
-    puts "or enter return to go return to the list of upcoming dates".colorize(:brown)
-    puts "on which movies are playing in a park.".colorize(:brown)
+    puts "Enter another number to get the showing details for that movie".colorize(:cyan)
+    puts "or enter return to go return to the list of upcoming dates".colorize(:cyan)
+    puts "on which movies are playing in a park.".colorize(:cyan)
   end
 
   def by_park_path
@@ -170,7 +170,7 @@ class UpcomingMoviesInThePark::CLI
             by_park_instructions_1
             break
           else 
-            puts "Hrm, I don't understand what you want.".colorize(:brown)
+            puts "Hrm, I don't understand what you want.".colorize(:cyan)
             by_park_instructions_2
           end 
         end
@@ -190,9 +190,9 @@ class UpcomingMoviesInThePark::CLI
   end
 
   def by_park_instructions_2
-    puts "Enter another number to get the showing details for that movie".colorize(:brown)
-    puts "or enter return to return to the list of parks".colorize(:brown)
-    puts "in which upcoming movies are playing.".colorize(:brown)
+    puts "Enter another number to get the showing details for that movie".colorize(:cyan)
+    puts "or enter return to return to the list of parks".colorize(:cyan)
+    puts "in which upcoming movies are playing.".colorize(:cyan)
   end
 
 end
