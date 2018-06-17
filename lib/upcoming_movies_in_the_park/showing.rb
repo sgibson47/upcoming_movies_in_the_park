@@ -1,7 +1,8 @@
 require_relative './park'
 require_relative './gate'
+require_relative './super'
 
-class UpcomingMoviesInThePark::Showing
+class UpcomingMoviesInThePark::Showing < UpcomingMoviesInThePark::Super
   attr_accessor :name, :url
   attr_reader :date, :park
 
@@ -19,10 +20,6 @@ class UpcomingMoviesInThePark::Showing
   def display_details
     puts "#{@name} is playing from #{self.time}".colorize(:red)
     puts "on #{@date.month} #{@date.day}, #{@date.year} in #{@park.name}.".colorize(:red)
-  end
-
-  def save
-    @@all << self
   end
 
   def time

@@ -1,20 +1,18 @@
-class UpcomingMoviesInThePark::Park
+require_relative './super'
+
+class UpcomingMoviesInThePark::Park < UpcomingMoviesInThePark::Super
   attr_accessor :name, :showings
 
-  @@all = []
+  @@all =[]
 
-  def save
-    @@all << self
-  end 
+  def self.all
+    @@all
+  end
 
   def initialize(name)
     @name = name
     @showings =[]
     self.save
-  end
-
-  def self.all
-    @@all
   end
 
   def self.find_or_create_by_name(name)
