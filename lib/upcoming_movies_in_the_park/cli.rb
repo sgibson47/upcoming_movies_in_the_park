@@ -104,25 +104,7 @@ class UpcomingMoviesInThePark::CLI
         puts "\n"
         by_date_instructions_2
         input = nil
-        while input != "return"
-          input = gets.strip
-          if input.to_i > 0 && input.to_i <= date.showings.length
-            showing = date.showings[input.to_i - 1]
-            puts "\n"
-            showing.display_details
-            puts "\n"
-            by_date_instructions_2
-          elsif input == "return"
-            puts "\n"
-            UpcomingMoviesInThePark::Gate.list_by_date
-            puts "\n"
-            by_date_instructions_1
-            break
-          else
-            puts "Hrm, I don't understand what you want.".colorize(:cyan)
-            by_date_instructions_2
-          end 
-        end
+        by_date_path_2
       elsif input == "back"
         menu
         break
@@ -131,6 +113,28 @@ class UpcomingMoviesInThePark::CLI
         by_date_instructions_1
       end 
     end
+  end
+
+  def by_date_path_2
+    while input != "return"
+    input = gets.strip
+    if input.to_i > 0 && input.to_i <= date.showings.length
+      showing = date.showings[input.to_i - 1]
+      puts "\n"
+      showing.display_details
+      puts "\n"
+      by_date_instructions_2
+    elsif input == "return"
+      puts "\n"
+      UpcomingMoviesInThePark::Gate.list_by_date
+      puts "\n"
+      by_date_instructions_1
+      break
+    else
+      puts "Hrm, I don't understand what you want.".colorize(:cyan)
+      by_date_instructions_2
+    end 
+  end
   end
 
   def by_date_instructions_1
