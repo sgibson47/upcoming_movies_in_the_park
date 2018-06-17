@@ -1,4 +1,5 @@
 module UpcomingMoviesInThePark::Super
+  
   module InstanceMethods
     
     def save
@@ -11,8 +12,13 @@ module UpcomingMoviesInThePark::Super
     end
 
   end
- 
-  module ClassMethods
- 
+
+  module GateParkInstanceMethods
+    
+    def add_showing(showing)
+      self.showings << showing
+    end
+  
   end
+
 end

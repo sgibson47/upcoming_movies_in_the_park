@@ -2,8 +2,8 @@ require_relative './super'
 
 class UpcomingMoviesInThePark::Park
   attr_accessor :name, :showings
-  extend UpcomingMoviesInThePark::Super::ClassMethods
   include UpcomingMoviesInThePark::Super::InstanceMethods
+  include UpcomingMoviesInThePark::Super::GateParkInstanceMethods
 
   @@all =[]
 
@@ -24,10 +24,6 @@ class UpcomingMoviesInThePark::Park
     else
       park_1 = self.new(name)
     end
-  end
-
-  def add_showing(showing)
-    @showings << showing
   end
 
   def self.list_by_name

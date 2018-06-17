@@ -3,7 +3,6 @@ require_relative './gate'
 require_relative './super'
 
 class UpcomingMoviesInThePark::Showing
-  extend UpcomingMoviesInThePark::Super::ClassMethods
   include UpcomingMoviesInThePark::Super::InstanceMethods
 
   attr_accessor :name, :url
