@@ -1,7 +1,9 @@
 require_relative './super'
 
-class UpcomingMoviesInThePark::Park < UpcomingMoviesInThePark::Super
+class UpcomingMoviesInThePark::Park
   attr_accessor :name, :showings
+  extend UpcomingMoviesInThePark::Super::ClassMethods
+  include UpcomingMoviesInThePark::Super::InstanceMethods
 
   @@all =[]
 
@@ -31,11 +33,6 @@ class UpcomingMoviesInThePark::Park < UpcomingMoviesInThePark::Super
   def self.list_by_name
     self.all.each_with_index {|park, i|
     puts "#{i +1}. #{park.name}".colorize(:green)}
-  end
-
-  def list_showings
-    @showings.each_with_index {|showing, i| 
-      puts "#{i +1}. #{showing.name}".colorize(:cyan)}
   end
 
 end

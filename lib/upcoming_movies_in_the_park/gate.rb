@@ -1,7 +1,10 @@
 require_relative './super'
 
-class UpcomingMoviesInThePark::Gate < UpcomingMoviesInThePark::Super
+class UpcomingMoviesInThePark::Gate
   attr_accessor :name, :day, :month, :year, :showings
+
+  extend UpcomingMoviesInThePark::Super::ClassMethods
+  include UpcomingMoviesInThePark::Super::InstanceMethods
 
   @@all =[]
 
@@ -35,11 +38,6 @@ class UpcomingMoviesInThePark::Gate < UpcomingMoviesInThePark::Super
   def self.list_by_date
     self.all.each_with_index {|gate, i|
       puts "#{i +1}. #{gate.month} #{gate.day}, #{gate.year}".colorize(:green)}
-  end
-
-  def list_showings
-    @showings.each_with_index {|showing, i| 
-      puts "#{i +1}. #{showing.name}".colorize(:cyan)}
   end
 
 end
