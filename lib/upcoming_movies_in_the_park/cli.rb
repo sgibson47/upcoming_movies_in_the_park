@@ -41,7 +41,7 @@ class UpcomingMoviesInThePark::CLI
         break
       else
         puts "\n"
-        puts "Hrm, I don't understand what you want.".colorize(:blue)
+        puts hrm.colorize(:blue)
         print "Please enter".colorize(:blue)
         print " by name"
         print ", ".colorize(:blue)
@@ -54,6 +54,10 @@ class UpcomingMoviesInThePark::CLI
       end
     end
   end 
+
+  def hrm
+    "Hrm, I don't understand what you want."
+  end
 
   def by_name_path
     puts "\n"
@@ -74,7 +78,7 @@ class UpcomingMoviesInThePark::CLI
         menu
         break
       else
-        puts "Hrm, I don't understand what you want.".colorize(:green)
+        puts hrm.colorize(:green)
         by_name_instructions
       end 
     end
@@ -109,7 +113,7 @@ class UpcomingMoviesInThePark::CLI
         menu
         break
       else
-        puts "Hrm, I don't understand what you want.".colorize(:green)
+        puts hrm.colorize(:green)
         by_date_instructions_1
       end 
     end
@@ -131,7 +135,7 @@ class UpcomingMoviesInThePark::CLI
       by_date_instructions_1
       break
     else
-      puts "Hrm, I don't understand what you want.".colorize(:cyan)
+      puts hrm.colorize(:cyan)
       by_date_instructions_2
     end 
   end
@@ -176,7 +180,7 @@ class UpcomingMoviesInThePark::CLI
         menu
         break
       else 
-        puts "Hrm, I don't understand what you want.".colorize(:green)
+        puts hrm.colorize(:green)
         by_park_instructions_1
       end 
     end
@@ -198,7 +202,7 @@ class UpcomingMoviesInThePark::CLI
       by_park_instructions_1
       break
     else 
-      puts "Hrm, I don't understand what you want.".colorize(:cyan)
+      puts hrm.colorize(:cyan)
       by_park_instructions_2
     end 
   end
