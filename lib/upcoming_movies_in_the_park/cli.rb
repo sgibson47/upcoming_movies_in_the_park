@@ -108,7 +108,7 @@ class UpcomingMoviesInThePark::CLI
         puts "\n"
         by_date_instructions_2
         input = nil
-        by_date_path_2
+        by_date_path_2(date)
       elsif input == "back"
         menu
         break
@@ -119,7 +119,8 @@ class UpcomingMoviesInThePark::CLI
     end
   end
 
-  def by_date_path_2
+  def by_date_path_2(date)
+    input = nil
     while input != "return"
     input = gets.strip
     if input.to_i > 0 && input.to_i <= date.showings.length
@@ -175,7 +176,7 @@ class UpcomingMoviesInThePark::CLI
         puts "\n"
         by_park_instructions_2
         input = nil
-        by_park_path_2
+        by_park_path_2(park)
       elsif input == "back"
         menu
         break
@@ -186,7 +187,8 @@ class UpcomingMoviesInThePark::CLI
     end
   end
 
-  def by_park_path_2
+  def by_park_path_2(park)
+    input = nil
     while input != "return"
     input = gets.strip
     if input.to_i > 0 && input.to_i <= park.showings.length

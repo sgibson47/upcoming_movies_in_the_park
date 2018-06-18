@@ -1,4 +1,4 @@
-require_relative './super'
+#require_relative './super'
 
 class UpcomingMoviesInThePark::Park
   attr_accessor :name, :showings
@@ -6,6 +6,7 @@ class UpcomingMoviesInThePark::Park
   include UpcomingMoviesInThePark::Super::GateParkInstanceMethods
 
   @@all =[]
+
 
   def self.all
     @@all

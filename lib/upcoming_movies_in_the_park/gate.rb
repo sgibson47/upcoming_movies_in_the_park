@@ -1,4 +1,4 @@
-require_relative './super'
+#require_relative './super'
 
 class UpcomingMoviesInThePark::Gate
   attr_accessor :name, :day, :month, :year, :showings
