@@ -209,7 +209,7 @@ class UpcomingMoviesInThePark::CLI
   def by_park_instructions_1
     print "Enter ".colorize(:green)
     print "a number"
-    puts " to get a list of movies playing in that park".colorize(:green)
+    puts " to get a list of movies playing in that park ".colorize(:green)
     print "or enter ".colorize(:green)
     print "back"
     puts " to go back to the main menu.".colorize(:green)
@@ -221,7 +221,7 @@ class UpcomingMoviesInThePark::CLI
     puts " to get the showing details for that movie".colorize(:cyan)
     print "or enter ".colorize(:cyan)
     print "return"
-    print " to return to the list of parks".colorize(:cyan)
+    print " to return to the list of parks ".colorize(:cyan)
     puts "in which upcoming movies are playing.".colorize(:cyan)
   end
 
