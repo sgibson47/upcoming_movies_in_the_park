@@ -105,7 +105,6 @@ class UpcomingMoviesInThePark::CLI
         date.list_showings
         puts "\n"
         by_date_instructions_2
-        input = nil
         by_date_path_2(date)
       elsif input == "back"
         menu
@@ -173,7 +172,6 @@ class UpcomingMoviesInThePark::CLI
         park.list_showings
         puts "\n"
         by_park_instructions_2
-        input = nil
         by_park_path_2(park)
       elsif input == "back"
         menu
