@@ -1,5 +1,3 @@
-#require_relative './super'
-
 class UpcomingMoviesInThePark::Park
   attr_accessor :name, :showings
   include UpcomingMoviesInThePark::Super::InstanceMethods

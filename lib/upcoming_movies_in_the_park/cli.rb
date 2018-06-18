@@ -1,5 +1,3 @@
-
-
 class UpcomingMoviesInThePark::CLI
 
   def call

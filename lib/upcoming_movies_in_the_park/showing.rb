@@ -1,7 +1,3 @@
-#require_relative './park'
-#require_relative './gate'
-#require_relative './super'
-
 class UpcomingMoviesInThePark::Showing
   include UpcomingMoviesInThePark::Super::InstanceMethods
 
