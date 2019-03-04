@@ -12,6 +12,10 @@ Type the below and follow the on screen prompts.
 
     $ upcoming_movies_in_the_park
 
+## Demo
+
+Check out a demo [here](https://www.youtube.com/watch?v=WYfyFL09Q5o).
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
